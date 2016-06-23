@@ -3,9 +3,9 @@ Why?
 
 Determining whether or not a given day is a "market holiday" is tricky. The rules are as follows:
 
-* If the date is on a weekday, okay: it's a market holiday
-* If the date is on a Sunday, then the following Monday is a market holiday
-* If the date is on a Saturday, then the previous Friday is a market holiday, unless you're checking for New Year's day, in which case New Year's day is not observed this year
+* If the date is one of the observed holidays, and it's on a weekday, okay: it's a market holiday
+* If the date is one of the observed holidays, and it's on a Sunday, then the following Monday is a market holiday
+* If the date is one of the observed holidays, and it's on a Saturday, then the previous Friday is a market holiday, UNLESS you're checking for New Year's day, in which case New Year's day is not observed this year
 
 And then there's the whole business of holidays being on the Xth Monday of whatever month, bla-bla-bla. And don't even get me started on calculating Easter/Good Friday!
 
