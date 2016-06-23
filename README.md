@@ -27,5 +27,5 @@ Example usage
     if(tomorrow.IsChristmasHoliday()) // the 25th on most years, but the 24th or 26th on some
         Console.WriteLine("Tomorrow is Christmas Day (observed)");
     
-    if(tomorrow.IsHoliday)
+    if(tomorrow.IsMarketHoliday())
         Console.WriteLine("Tomrrow is some kind of market holiday.");
