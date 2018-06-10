@@ -13,7 +13,7 @@ namespace MarketHolidaysTest
         {
             List<string> foundHolidays = new List<string>();
  
-            // we're going to test all the holidays in 2015 through the end of 2020 - 11 years of testing!
+            // we're going to test all the holidays in 2015 through the end of 2025 - 11 years of testing!
             int startYear = 2015;
             int endYear = 2025;
             int expectedHolidayDays = (endYear - startYear + 1) * 9 - 1; // one New Year's Day (in 2022) is not observed, thus: -1
@@ -25,38 +25,36 @@ namespace MarketHolidaysTest
  
             do
             {
-                FbmDateTime fbmDateTime = new FbmDateTime(testDay);
- 
-                if (fbmDateTime.Date.IsChristmasHoliday())
+                if (testDay.IsChristmasHoliday())
                     christmas++;
                
-                if (fbmDateTime.Date.IsGoodFriday())
+                if (testDay.IsGoodFriday())
                     goodFriday++;
                
-                if (fbmDateTime.Date.IsIndependenceHoliday())
+                if (testDay.IsIndependenceHoliday())
                     independence++;
  
-                if (fbmDateTime.Date.IsLaborDay())
+                if (testDay.IsLaborDay())
                     laborDay++;
  
-                if (fbmDateTime.Date.IsMemorialDay())
+                if (testDay.IsMemorialDay())
                     memorialDay++;
  
-                if (fbmDateTime.Date.IsMLKDay())
+                if (testDay.IsMLKDay())
                     MLK++;
  
-                if (fbmDateTime.Date.IsNewYearsHoliday())
+                if (testDay.IsNewYearsHoliday())
                     newYears++;
  
-                if (fbmDateTime.Date.IsPresidentsDay())
+                if (testDay.IsPresidentsDay())
                     presidents++;
  
-                if (fbmDateTime.Date.IsThanksgivingDay())
+                if (testDay.IsThanksgivingDay())
                     thanksgiving++;
  
-                if (fbmDateTime.IsHoliday)
+                if (testDay.IsHoliday)
                 {
-                    foundHolidays.Add(testDay.ToString("MM/dd/yyyy"));
+                    foundHolidays.Add(testDay.ToString(@"MM\/dd\/yyyy"));
                 }
  
                 testDay = testDay.AddDays(1);
