@@ -8,6 +8,33 @@ namespace MarketHolidaysTest
     [TestClass]
     public class DateTimeMarketHolidayExtensionsTest
     {
+        class FbmDateTime
+        {
+            public FbmDateTime(DateTime date)
+            {
+                this.Date = date;
+            }
+
+            public DateTime Date { get; }
+
+            public bool IsHoliday
+            {
+                get
+                {
+                    return
+                        Date.IsChristmasHoliday() ||
+                        Date.IsGoodFriday() ||
+                        Date.IsIndependenceHoliday() ||
+                        Date.IsLaborDay() ||
+                        Date.IsMemorialDay() ||
+                        Date.IsMLKDay() ||
+                        Date.IsNewYearsHoliday() ||
+                        Date.IsPresidentsDay() ||
+                        Date.IsThanksgivingDay();
+                }
+            }
+        }
+     
         [TestMethod]
         public void TestIsHoliday()
         {
